@@ -14,6 +14,7 @@ module.exports = {
         'app': path.join(__dirname, 'src')
     },
     output: {
+        publicPath: '/',
         path: __dirname,
         filename: '[name].js'
     },
@@ -23,7 +24,15 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [
+                    'ng-annotate-loader',
                     'babel-loader'
+                ]
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    'ngtemplate-loader',
+                    'html-loader'
                 ]
             },
             {
@@ -45,5 +54,11 @@ module.exports = {
     plugins: [
         extractCSS,
         htmlEntry
-    ]
+    ],
+    devtool: 'source-map',
+    devServer: {
+        inline: false,
+        contentBase: __dirname,
+        historyApiFallback: true
+    }
 };
