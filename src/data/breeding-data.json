@@ -1,0 +1,46 @@
+{
+    "baseSkinColors": [
+        "earthbound", 
+        "jade", 
+        "jasper", 
+        "mauve",
+        "onyx",
+        "pearl",
+        "russian",
+        "solar"
+    ], 
+    "markings": [
+        "anaconda",
+        "bandit",
+        "bullseye",
+        "cape",
+        "chimera",
+        "collared",
+        "dalmatian",
+        "fawn spots",
+        "fleabitten",
+        "ghoul",
+        "harlequin",
+        "highlights",
+        "ink",
+        "king cheetah",
+        "marked",
+        "merle",
+        "nebula",
+        "siamese",
+        "smear",
+        "soot",
+        "splash",
+        "tasmanian tiger",
+        "victorian",
+        "water trickle",
+        "webbed"
+    ],
+    "mutations": [
+        "maned",
+        "fanged",
+        "albino",
+        "whelp syndrome",
+        "wingless"
+    ]
+}

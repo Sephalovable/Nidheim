@@ -1,12 +1,13 @@
 import angular from 'angular';
 
-import templateUrl from './index.html';
+import common from "./common";
 
-import './index.scss';
+import templateUrl from './template.html';
+import './style.scss';
 
 const module = angular
     .module('app.containers', [
-
+        common
     ])
     .component('app', {templateUrl});
 
