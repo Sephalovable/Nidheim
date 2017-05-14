@@ -9,6 +9,15 @@
         "russian",
         "solar"
     ], 
+    "breeds":[
+        "blisterwing",
+        "pridebreaker",
+        "ripplefrill",
+        "slabhide",
+        "vilebane",
+        "windspeaker"
+    ],
+
     "markings": [
         "anaconda",
         "bandit",

@@ -18,6 +18,10 @@ return DATABASE.mutations;
 
 }
 
+getBreeds(){
+    return DATABASE.breeds;
+}
+
 }
 
 export default DatabaseService;
