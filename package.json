@@ -5,7 +5,7 @@
   "main": "src/app",
   "scripts": {
     "build": "webpack --optimize-minimize",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
