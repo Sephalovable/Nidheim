@@ -1,2 +1,4 @@
-<h1 ng-repeat = "marking in $ctrl.markings"> {{marking}}</h1>
-
+<label ng-repeat = "marking in $ctrl.markings">
+    <input type = "checkbox" ng-click ="$ctrl.selectMarking(marking)"></input> 
+    {{marking}}
+</label>
