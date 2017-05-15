@@ -5,10 +5,10 @@ const component = {
     templateUrl,
     controller: function ($rootScope, GeneratorService) {
         this.result = null;
-        $rootScope.$on("newResult", function (event, newResult) {
+        $rootScope.$on("newResult", (event, newResult) => {
             this.result = newResult; 
         });
-        this.generate = GeneratorService.generate;
+        this.generate = () => GeneratorService.generate();
     }
 };
 
