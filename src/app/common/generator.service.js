@@ -107,8 +107,8 @@ class GeneratorService {
 
     _generateMutations() {
         function getOffsetBound(index) {
-            // the first mutation is a 30% chance
-            return 70 + (10 * index);
+            // the first mutation is a 3% chance
+            return 97 + (1 * index);
         }
 
         const MAX_MUTATIONS = _.random(0, 3);
