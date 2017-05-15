@@ -1,0 +1,12 @@
+<h2>Character {{$ctrl.id}}</h2>
+<label>Gender: <span>{{$ctrl.character.gender}}</span></label>
+<label>Breed: <span>{{$ctrl.character.breed}}</span></label>
+<label>Skin: <span>{{$ctrl.character.skin}}</span></label>
+<label data-ng-if="$ctrl.character.markings.length">
+    Markings:
+    <span data-ng-repeat="marking in $ctrl.character.markings">{{marking}}</span>
+</label>
+<label data-ng-if="$ctrl.character.mutations.length">
+    Mutations:
+    <span data-ng-repeat="mutation in $ctrl.character.mutations">{{mutation}}</span>
+</label>

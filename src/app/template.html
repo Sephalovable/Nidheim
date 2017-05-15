@@ -1,10 +1,12 @@
-<div class = "result">
-    <span>
-        {{$ctrl.result}}
-    </span>
+<section class = "result">
+    <div>
+        <result-display data-ng-repeat="character in $ctrl.result track by $index"
+                        data-id="{{$index + 1}}"
+                        data-character="character"></result-display>
+    </div>
     <button data-ng-click = "$ctrl.generate()"
             data-ng-disabled="!$ctrl.checkCanGenerate()">GENERATE</button>
-</div>
+</section>
 
 <section class = "father">
     <breeds-list data-parent="father"></breeds-list>
