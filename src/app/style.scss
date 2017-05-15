@@ -12,6 +12,7 @@ app {
         }
 }
 button {
+    border: 4px double black;
     letter-spacing: 5px;
     padding-left: 50px;
     padding-right: 50px;
@@ -22,13 +23,28 @@ button {
    margin-bottom: 10px;
 }
 .boxed {
+    background-color: gray;
+    opacity: 0.95;
+    filter: alpha(opacity=95);
     display: inline-block;
     width: 400px;
-    border: 4px solid red;
+    border: 4px double black;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+    margin-left: 5px;
+    margin-top: 20px;
 }
 .container {
     display: inline-flex;
+}
+
+body{
+    background-image: url("http://orig09.deviantart.net/abf0/f/2017/135/f/a/dragon_wallpaper_by_dethmisu-db9c2w6.jpg");
+}
+
+.center{
+    margin: auto;
+    width: 75%;
+    padding: 10px;
 }
