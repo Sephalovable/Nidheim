@@ -1,0 +1,8 @@
+app {
+    section{
+        display: inline-block;
+    }
+            section + section{
+            margin-left: 15px;
+        }
+}

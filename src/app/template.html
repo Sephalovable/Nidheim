@@ -1,4 +1,18 @@
-<breeds-list></breeds-list>
+<div class = "result">
+    <span>
+            {{$ctrl.result}}
+    </span>
+    <button ng-click = "$ctrl.generate()">GENERATE</button>
+</div>
 
-<markings-list></markings-list>
+<section class = "father">
+    <breeds-list></breeds-list>
+    <skins-list></skins-list>
+    <markings-list></markings-list>
+</section>
 
+<section class = "mother">
+    <breeds-list></breeds-list>
+    <skins-list></skins-list>
+    <markings-list></markings-list>
+</section>
