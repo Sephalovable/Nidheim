@@ -30,29 +30,15 @@ class GeneratorService {
             return;
         }
 
-        const FATHER = this.options.father,
-            MOTHER = this.options.mother,
-            MAX_MARKINGS = _.random(3, 8);
+        const MAX_CHARACTERS = _.random(1, 4);
 
-        let skins = [FATHER.skin, MOTHER.skin],
-            breeds = [FATHER.breed, MOTHER.breed],
-            markings = _.concat([], FATHER.markings, MOTHER.markings); // combine all possible solutions
+        let characters = [];
 
-        let selectedSkin = skins[_.random(0, 1)],
-            selectedBreed = breeds[_.random(0, 1)],
-            selectedMutations = this._generateMutations(),
-            selectedMarkings = []; // the array we'll store into later
-
-        // keep adding markings until we hit the random MAX_MARKINGS amount
-        for (let i = 0; i < MAX_MARKINGS && markings.length; i++) {
-            const MAX_INDEX = markings.length - 1; // get the max index to use as an upper bound random value to access with
-            let marking = markings[_.random(0, MAX_INDEX)]; // get the random marking available from the list
-
-            selectedMarkings.push(marking); // store the random marking
-            _.pull(markings, marking); // remove it from the list so it's not added multiple times if possible
+        while (characters.length < MAX_CHARACTERS) {
+            characters.push(this._generateCharacter());
         }
 
-        this.$rootScope.$broadcast('newResult', {selectedSkin, selectedBreed, selectedMarkings, selectedMutations});
+        this.$rootScope.$broadcast('newResult', characters);
     }
 
     checkCanGenerate() {
@@ -83,6 +69,40 @@ class GeneratorService {
         }
 
         console.log(`${parent} Markings: ${markings}`);
+    }
+
+    _generateCharacter() {
+        const FATHER = this.options.father,
+            MOTHER = this.options.mother,
+            GENDERS = ["male", "female"],
+            MAX_MARKINGS = _.random(3, 8);
+
+        let skins = [FATHER.skin, MOTHER.skin],
+            breeds = [FATHER.breed, MOTHER.breed],
+            markings = _.concat([], FATHER.markings, MOTHER.markings); // combine all possible solutions
+
+        let selectedSkin = skins[_.random(0, 1)],
+            selectedBreed = breeds[_.random(0, 1)],
+            selectedMutations = this._generateMutations(),
+            selectedGender = GENDERS[_.random(0, 1)],
+            selectedMarkings = []; // the array we'll store into later
+
+        // keep adding markings until we hit the random MAX_MARKINGS amount
+        for (let i = 0; i < MAX_MARKINGS && markings.length; i++) {
+            const MAX_INDEX = markings.length - 1; // get the max index to use as an upper bound random value to access with
+            let marking = markings[_.random(0, MAX_INDEX)]; // get the random marking available from the list
+
+            selectedMarkings.push(marking); // store the random marking
+            _.pull(markings, marking); // remove it from the list so it's not added multiple times if possible
+        }
+
+        return {
+            skin: selectedSkin,
+            breed: selectedBreed,
+            gender: selectedGender,
+            markings: selectedMarkings,
+            mutations: selectedMutations,
+        };
     }
 
     _generateMutations() {
