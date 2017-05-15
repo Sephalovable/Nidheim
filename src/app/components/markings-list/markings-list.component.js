@@ -1,6 +1,7 @@
 import _ from "lodash";
 
 import templateUrl from "./template.html";
+
 import "./style.scss";
 
 const component = {
@@ -16,7 +17,7 @@ const component = {
                 }
                                     console.log(this.selectedMarkings);
             }
-    }
+        }
 };
 
 export default component;

@@ -5,7 +5,7 @@ class DatabaseService {
 
     }
 
-getSkinColors(){
+getSkins(){
     return DATABASE.baseSkinColors;
 }
 
