@@ -1,19 +1,21 @@
-import _ from "lodash";
-
 import templateUrl from "./template.html";
-
 import "./style.scss";
 
 const component = {
     templateUrl,
-    controller: function(DatabaseService){
-        this.breeds = DatabaseService.getBreeds();
-        let selectedBreed = null;
-        this.setSelectedBreed = function(breed){
-            selectedBreed = breed;
-            console.log(`new selected breed: ${selectedBreed}`);
+    controller: function(DatabaseService, GeneratorService) {
+        let PARENT = null;
+
+        this.$onInit = () => {
+            PARENT = (this.parent === 'father') ? GeneratorService.PARENTS.FATHER : GeneratorService.PARENTS.MOTHER;
+
+            this.breeds = DatabaseService.getBreeds();
         };
 
+        this.setSelectedBreed = (breed) => GeneratorService.setBreed(PARENT, breed);
+    },
+    bindings: {
+        parent: '@'
     }
 };
 

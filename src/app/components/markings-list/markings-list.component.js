@@ -1,23 +1,22 @@
-import _ from "lodash";
-
 import templateUrl from "./template.html";
-
 import "./style.scss";
 
 const component = {
     templateUrl, 
-    controller: function(DatabaseService){
+    controller: function(DatabaseService, GeneratorService) {
+        let PARENT = null;
+
+        this.$onInit = () => {
+            PARENT = (this.parent === "father") ? GeneratorService.PARENTS.FATHER : GeneratorService.PARENTS.MOTHER;
+
             this.markings = DatabaseService.getMarkings();
-            this.selectedMarkings = [];
-            this.selectMarking = function(marking){
-                if (this.selectedMarkings.includes(marking)){
-                    _.pull(this.selectedMarkings, marking);
-                } else {
-                    this.selectedMarkings.push(marking);
-                }
-                                    console.log(this.selectedMarkings);
-            }
-        }
+        };
+
+        this.selectMarking = (marking) => GeneratorService.setMarking(PARENT, marking);
+    },
+    bindings: {
+        parent: '@'
+    }
 };
 
 export default component;

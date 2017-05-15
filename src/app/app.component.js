@@ -4,10 +4,14 @@ import './style.scss';
 const component = {
     templateUrl,
     controller: function ($rootScope, GeneratorService) {
-        this.result = null;
-        $rootScope.$on("newResult", (event, newResult) => {
-            this.result = newResult; 
-        });
+        this.$onInit = () => {
+            this.result = null;
+
+            $rootScope.$on("newResult", (event, newResult) => {
+                this.result = newResult;
+            });
+        };
+
         this.generate = () => GeneratorService.generate();
     }
 };
