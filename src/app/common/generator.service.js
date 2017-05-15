@@ -74,8 +74,8 @@ class GeneratorService {
     _generateCharacter() {
         const FATHER = this.options.father,
             MOTHER = this.options.mother,
-            GENDERS = ["male", "female"],
-            MAX_MARKINGS = _.random(3, 8);
+            GENDERS = ["Male", "Female"],
+            MAX_MARKINGS = _.random(1, 8);
 
         let skins = [FATHER.skin, MOTHER.skin],
             breeds = [FATHER.breed, MOTHER.breed],
