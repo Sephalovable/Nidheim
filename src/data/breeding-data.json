@@ -22,8 +22,8 @@
         "Bandit",
         "Bullseye",
         "Caped",
-        "Chimera",
         "Collared",
+        "Crested",
         "Dalmatian",
         "Fawn Spots",
         "Fleabitten",
@@ -35,6 +35,7 @@
         "Marked",
         "Merle",
         "Nebula",
+        "Piebald",
         "Siamese",
         "Smear",
         "Soot",
@@ -50,6 +51,7 @@
         "Albino",
         "Whelp Syndrome",
         "Wingless",
-        "Chameleon"
+        "Chameleon",
+        "Chimerism"
     ]
 }
