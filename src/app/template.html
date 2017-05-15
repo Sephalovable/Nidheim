@@ -2,7 +2,8 @@
     <span>
             {{$ctrl.result}}
     </span>
-    <button ng-click = "$ctrl.generate()">GENERATE</button>
+    <button data-ng-click = "$ctrl.generate()"
+            data-ng-disabled="!$ctrl.checkCanGenerate()">GENERATE</button>
 </div>
 
 <section class = "father">
