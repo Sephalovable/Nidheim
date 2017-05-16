@@ -11,6 +11,7 @@ class GeneratorService {
         };
 
         this.options = {
+            plusOne: false,
             father: {
                 skin: null,
                 breed: null,
@@ -30,7 +31,8 @@ class GeneratorService {
             return;
         }
 
-        const MAX_CHARACTERS = _.random(1, 4);
+        const MAX_CHARACTER_SEED = _.random(1, 4);        
+        const MAX_CHARACTERS = (this.options.plusOne) ? MAX_CHARACTER_SEED + 1 : MAX_CHARACTER_SEED;
 
         let characters = [];
 
@@ -75,7 +77,7 @@ class GeneratorService {
         const FATHER = this.options.father,
             MOTHER = this.options.mother,
             GENDERS = ["Male", "Female"],
-            MAX_MARKINGS = _.random(1, 8);
+            MAX_MARKINGS = _.random(1, 12);
 
         let skins = [FATHER.skin, MOTHER.skin],
             breeds = [FATHER.breed, MOTHER.breed],
