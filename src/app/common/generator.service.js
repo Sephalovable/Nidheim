@@ -10,6 +10,8 @@ class GeneratorService {
             MOTHER: 'mother'
         };
 
+        this.MAX_MARKINGS = 12;
+
         this.options = {
             plusOne: false,
             father: {
@@ -41,6 +43,29 @@ class GeneratorService {
         }
 
         this.$rootScope.$broadcast('newResult', characters);
+    }
+
+    generateRandom() {
+        const BREEDS = this.DatabaseService.getBreeds(),
+            SKINS = this.DatabaseService.getSkins(),
+            BREEDS_MAX_INDEX = BREEDS.length - 1,
+            SKINS_MAX_INDEX = SKINS.length - 1;
+        
+        this.options = {
+            plusOne: false,
+            father: {
+                skin: SKINS[_.random(0, SKINS_MAX_INDEX)],
+                breed: BREEDS[_.random(0, BREEDS_MAX_INDEX)],
+                markings: this._generateRandomListOfMarkings()
+            },
+            mother: {
+                skin: SKINS[_.random(0, SKINS_MAX_INDEX)],
+                breed: BREEDS[_.random(0, BREEDS_MAX_INDEX)],
+                markings: this._generateRandomListOfMarkings()
+            }
+        };
+
+        this.generate();
     }
 
     checkCanGenerate() {
@@ -77,7 +102,7 @@ class GeneratorService {
         const FATHER = this.options.father,
             MOTHER = this.options.mother,
             GENDERS = ["Male", "Female"],
-            MAX_MARKINGS = _.random(1, 12);
+            MAX_MARKINGS = _.random(1, this.MAX_MARKINGS);
 
         let skins = [FATHER.skin, MOTHER.skin],
             breeds = [FATHER.breed, MOTHER.breed],
@@ -127,6 +152,23 @@ class GeneratorService {
         }
 
         return selectedMutations;
+    }
+
+    _generateRandomListOfMarkings() {
+        const MAX_MARKINGS = _.random(1, this.MAX_MARKINGS);
+
+        let markings = _.concat([], this.DatabaseService.getMarkings()),
+             chosenMarkings = [];
+
+        for (let i = 0; i < MAX_MARKINGS; i++) {
+            const MAX_INDEX = markings.length - 1;
+            let marking = markings[_.random(0, MAX_INDEX)];
+
+            chosenMarkings.push(marking);
+            _.remove(markings, marking);
+        }
+
+        return chosenMarkings;
     }
 }
 

@@ -17,6 +17,8 @@ const component = {
         this.checkCanGenerate = () => GeneratorService.checkCanGenerate();
 
         this.togglePlusOne = () => GeneratorService.options.plusOne = !GeneratorService.options.plusOne;
+
+        this.generateRandom = () => GeneratorService.generateRandom();
     }
 };
 

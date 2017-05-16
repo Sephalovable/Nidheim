@@ -31,6 +31,7 @@
     <div>
         <section>
         <button data-ng-click="$ctrl.generate()" data-ng-disabled="!$ctrl.checkCanGenerate()" div-align="center">GENERATE</button>
+        <button data-ng-click="$ctrl.generateRandom()" div-align="center">ROLL RANDOM</button>
         <label><input type ="checkbox" ng-click="$ctrl.togglePlusOne()"> Roll +1</label>
         </section>
         <result-display data-ng-repeat="character in $ctrl.result track by $index" data-id="{{$index + 1}}" data-character="character"></result-display>
