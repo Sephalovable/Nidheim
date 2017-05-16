@@ -30,9 +30,16 @@
 <section class="result">
     <div>
         <section>
-        <button data-ng-click="$ctrl.generate()" data-ng-disabled="!$ctrl.checkCanGenerate()" div-align="center">GENERATE</button>
-        <button data-ng-click="$ctrl.generateRandom()" div-align="center">ROLL RANDOM</button>
-        <label><input type ="checkbox" ng-click="$ctrl.togglePlusOne()"> Roll +1</label>
+            <button data-ng-click="$ctrl.generate()" data-ng-disabled="!$ctrl.checkCanGenerate()" div-align="center">ROLL NORMAL</button>
+        </section>
+        <br>
+        <section>
+            <button data-ng-click="$ctrl.generateRandom()" div-align="center">ROLL RANDOM</button>
+        </section>
+        <br>
+        <br>
+        <section>
+            <label><input type ="checkbox" ng-click="$ctrl.togglePlusOne()"> Fertility Treatment</label>   <label><input type ="checkbox" ng-click="$ctrl.togglePlusOne()"> Plump Heart</label>
         </section>
         <result-display data-ng-repeat="character in $ctrl.result track by $index" data-id="{{$index + 1}}" data-character="character"></result-display>
     </div>
@@ -41,3 +48,4 @@
 <br>
 <br>
 </div>
+<center>Roller designed by Dethmisu for Nidheim</center>
