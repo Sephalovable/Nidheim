@@ -1,2 +1,55 @@
-markings-list label{display:block}breeds-list{margin-bottom:20px;display:block}skins-list{display:inline-block}result-display{display:block;margin-left:20px}app .result span{display:block}app section{display:inline-block}app section+section{margin-left:15px}button{letter-spacing:5px;padding:10px 50px;margin-left:40%;margin-top:10px;margin-bottom:10px}.boxed,button{border:4px double #000}.boxed{background-color:gray;opacity:.95;filter:alpha(opacity=95);display:inline-block;width:400px;padding-left:20px;padding-right:20px;padding-bottom:20px;margin-left:5px;margin-top:20px}.container{display:inline-flex}body{background-image:url("http://orig09.deviantart.net/abf0/f/2017/135/f/a/dragon_wallpaper_by_dethmisu-db9c2w6.jpg")}.center{margin:auto;width:75%;padding:10px}
+markings-list label {
+  display: block; }
+breeds-list {
+  margin-bottom: 20px;
+  display: block; }
+skins-list {
+  display: inline-block; }
+result-display {
+  display: block;
+  margin-left: 20px; }
+app .result span {
+  display: block; }
+
+app section {
+  display: inline-block; }
+
+app section + section {
+  margin-left: 15px; }
+
+button {
+  border: 4px double black;
+  letter-spacing: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 40%;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.boxed {
+  background-color: gray;
+  opacity: 0.95;
+  filter: alpha(opacity=95);
+  display: inline-block;
+  width: 400px;
+  border: 4px double black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-left: 5px;
+  margin-top: 20px; }
+
+.container {
+  display: inline-flex; }
+
+body {
+  background-image: url("http://orig09.deviantart.net/abf0/f/2017/135/f/a/dragon_wallpaper_by_dethmisu-db9c2w6.jpg"); }
+
+.center {
+  margin: auto;
+  width: 75%;
+  padding: 10px; }
+
 /*# sourceMappingURL=app.css.map*/
