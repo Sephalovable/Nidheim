@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const htmlEntry = new HtmlPlugin({
-    hash: false,
+    hash: true,
     title: "Nidheim",
     template: path.resolve(__dirname, 'src/index.ejs')
 });
@@ -14,7 +14,7 @@ module.exports = {
         'app': path.join(__dirname, 'src')
     },
     output: {
-        publicPath: '/',
+        publicPath: '/Nidheim/',
         path: __dirname,
         filename: '[name].js'
     },
@@ -46,7 +46,7 @@ module.exports = {
                 test: /\.(jpg|png|ico|svg|eot|ttf|otf|woff2?)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'assets/[name].[ext]'
+                    name: 'assets/[name]_[hash:7].[ext]'
                 }
             }
         ]
