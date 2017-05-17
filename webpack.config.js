@@ -14,7 +14,6 @@ module.exports = {
         'app': path.join(__dirname, 'src')
     },
     output: {
-        publicPath: '/',
         path: __dirname,
         filename: '[name].js'
     },
