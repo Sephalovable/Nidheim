@@ -9,8 +9,16 @@ const htmlEntry = new HtmlPlugin({
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractCSS = new ExtractTextPlugin('app.css');
 
+const optimizeChunks = new webpack.optimize.CommonsChunkPlugin({
+    names: ['vendor']
+});
+
 module.exports = {
     entry: {
+        'vendor': [
+            'angular',
+            'lodash'
+        ],
         'app': path.join(__dirname, 'src')
     },
     output: {
@@ -53,6 +61,7 @@ module.exports = {
     },
     plugins: [
         extractCSS,
+        optimizeChunks,
         htmlEntry
     ],
     devtool: 'source-map',
