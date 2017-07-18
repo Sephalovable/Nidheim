@@ -18,16 +18,16 @@ button {
     padding-right: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-   margin-left: 40%;
    margin-top: 10px;
    margin-bottom: 10px;
+   text-align: center;
 }
 .boxed {
     background-color: gray;
     opacity: 0.95;
     filter: alpha(opacity=95);
     display: inline-block;
-    width: 400px;
+    width: 100%;
     border: 4px double black;
     padding-left: 20px;
     padding-right: 20px;
@@ -37,10 +37,11 @@ button {
 }
 .container {
     display: inline-flex;
+    width: 100%;
 }
 
 body{
-    background-image: url("http://orig09.deviantart.net/abf0/f/2017/135/f/a/dragon_wallpaper_by_dethmisu-db9c2w6.jpg");
+    background-image: url("https://orig02.deviantart.net/a245/f/2017/198/9/d/nidheimbackground_by_dethmisu-dbgoefh.jpg");
 }
 
 .center{

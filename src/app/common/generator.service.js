@@ -10,7 +10,7 @@ class GeneratorService {
             MOTHER: 'mother'
         };
 
-        this.MAX_MARKINGS = 12;
+        this.MAX_MARKINGS = 8;
 
         this.options = {
             plusOne: false,
