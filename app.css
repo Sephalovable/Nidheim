@@ -44,10 +44,8 @@ button {
 .container {
   display: inline-flex; }
 
-    body{
-    background-image: url("https://orig02.deviantart.net/a245/f/2017/198/9/d/nidheimbackground_by_dethmisu-dbgoefh.jpg");
-  
-  }
+body {
+  background-image: url("http://orig09.deviantart.net/abf0/f/2017/135/f/a/dragon_wallpaper_by_dethmisu-db9c2w6.jpg"); }
 
 .center {
   margin: auto;

@@ -458,7 +458,7 @@ exports.default = component;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+        value: true
 });
 
 var _angular = __webpack_require__(0);
@@ -743,8 +743,8 @@ exports.default = _module.name;
 /* 23 */
 /***/ (function(module, exports) {
 
-var path = '/Users/nathanh/Dev/Nidheim/src/app/components/breeds-list/template.html';
-var html = "<label ng-repeat = \"breed in $ctrl.breeds\">\n    <input type = \"radio\" name = \"{{$ctrl.parent}}SelectedBreed\" ng-click = \"$ctrl.setSelectedBreed(breed)\"/> {{breed}}\n</label>";
+var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/breeds-list/template.html';
+var html = "<label ng-repeat = \"breed in $ctrl.breeds\">\r\n    <input type = \"radio\" name = \"{{$ctrl.parent}}SelectedBreed\" ng-click = \"$ctrl.setSelectedBreed(breed)\"/> {{breed}}\r\n</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -752,8 +752,8 @@ module.exports = path;
 /* 24 */
 /***/ (function(module, exports) {
 
-var path = '/Users/nathanh/Dev/Nidheim/src/app/components/markings-list/template.html';
-var html = "<label ng-repeat = \"marking in $ctrl.markings\">\n    <input type = \"checkbox\" ng-click =\"$ctrl.selectMarking(marking)\"></input> \n    {{marking}}\n</label>\n";
+var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/markings-list/template.html';
+var html = "<label ng-repeat = \"marking in $ctrl.markings\">\r\n    <input type = \"checkbox\" ng-click =\"$ctrl.selectMarking(marking)\"></input> \r\n    {{marking}}\r\n</label>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -761,8 +761,8 @@ module.exports = path;
 /* 25 */
 /***/ (function(module, exports) {
 
-var path = '/Users/nathanh/Dev/Nidheim/src/app/components/result-display/template.html';
-var html = "<span></span><br>\n<label>{{$ctrl.id}}) {{$ctrl.character.gender}} - Healthy</label> \n<br>\n<label>{{$ctrl.character.breed}} - Fledgeling</label>\n<br>\n<label>{{$ctrl.character.skin}} with</label><label data-ng-if=\"$ctrl.character.markings.length\">\n    <label data-ng-repeat=\"marking in $ctrl.character.markings\">{{marking}}, </label>\n</label>\n<label data-ng-if=\"$ctrl.character.mutations.length\">\n    <br>\n    [Mutations:]\n    <label data-ng-repeat=\"mutation in $ctrl.character.mutations\">{{mutation}}</label>\n</label>\n";
+var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/result-display/template.html';
+var html = "<span></span><br>\r\n<label>{{$ctrl.id}}) {{$ctrl.character.gender}} - Healthy</label> \r\n<br>\r\n<label>{{$ctrl.character.breed}} - Fledgeling</label>\r\n<br>\r\n<label>{{$ctrl.character.skin}} with</label><label data-ng-if=\"$ctrl.character.markings.length\">\r\n    <label data-ng-repeat=\"marking in $ctrl.character.markings\">{{marking}}, </label>\r\n</label>\r\n<label data-ng-if=\"$ctrl.character.mutations.length\">\r\n    <br>\r\n    [Mutations:]\r\n    <label data-ng-repeat=\"mutation in $ctrl.character.mutations\">{{mutation}}</label>\r\n</label>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -770,7 +770,7 @@ module.exports = path;
 /* 26 */
 /***/ (function(module, exports) {
 
-var path = '/Users/nathanh/Dev/Nidheim/src/app/components/skins-list/template.html';
+var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/skins-list/template.html';
 var html = "<label ng-repeat = \"skin in $ctrl.skins\"><input type =\"radio\" name = \"{{$ctrl.parent}}SelectedSkin\" ng-click = \"$ctrl.setSelectedSkin(skin)\"/>{{skin}}</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -779,8 +779,8 @@ module.exports = path;
 /* 27 */
 /***/ (function(module, exports) {
 
-var path = '/Users/nathanh/Dev/Nidheim/src/app/template.html';
-var html = "<div class=\"center\">\n<div class=\"container\">\n\n<div class=\"boxed\">\n    <center><h2>Father</h2></center>\n    <hr>\n<section class = \"father\">\n   <h4>Breed</h4>\n        <breeds-list data-parent=\"father\"></breeds-list>\n    <h4>Base Coat</h4>\n        <skins-list data-parent=\"father\"></skins-list>\n        <h4>Markings</h4>\n        <markings-list data-parent=\"father\"></markings-list>\n</section>\n</div>\n<div class=\"boxed\">\n    <center><h2>Mother</h2></center>\n    <hr>\n<section class = \"mother\">\n    <h4>Breed</h4>\n    <breeds-list data-parent=\"mother\"></breeds-list>\n    <h4>Base Coat</h4>\n    <skins-list data-parent=\"mother\"></skins-list>\n    <h4>Markings</h4>\n    <markings-list data-parent=\"mother\"></markings-list>\n</section>\n</div>\n<br>\n<div class=\"boxed\">\n<section class=\"result\">\n    <div>\n        <section>\n            <button data-ng-click=\"$ctrl.generate()\" data-ng-disabled=\"!$ctrl.checkCanGenerate()\" div-align=\"center\">ROLL NORMAL</button>\n        </section>\n        <br>\n        <section>\n            <button data-ng-click=\"$ctrl.generateRandom()\" div-align=\"center\">ROLL RANDOM</button>\n        </section>\n        <br>\n        <br>\n        <section>\n            <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Fertility Treatment</label>   <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Plump Heart</label>\n        </section>\n        <result-display data-ng-repeat=\"character in $ctrl.result track by $index\" data-id=\"{{$index + 1}}\" data-character=\"character\"></result-display>\n    </div>\n    </div>\n    </div>\n<br>\n<br>\n</div>\n<center>Roller designed by Dethmisu for Nidheim</center>";
+var path = 'C:/Users/Master/Documents/Nidheim/src/app/template.html';
+var html = "<div class=\"center\">\r\n<div class=\"container\">\r\n\r\n<div class=\"boxed\">\r\n    <center><h2>Father</h2></center>\r\n    <hr>\r\n<section class = \"father\">\r\n   <h4>Breed</h4>\r\n        <breeds-list data-parent=\"father\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n        <skins-list data-parent=\"father\"></skins-list>\r\n        <h4>Markings</h4>\r\n        <markings-list data-parent=\"father\"></markings-list>\r\n</section>\r\n</div>\r\n<div class=\"boxed\">\r\n    <center><h2>Mother</h2></center>\r\n    <hr>\r\n<section class = \"mother\">\r\n    <h4>Breed</h4>\r\n    <breeds-list data-parent=\"mother\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n    <skins-list data-parent=\"mother\"></skins-list>\r\n    <h4>Markings</h4>\r\n    <markings-list data-parent=\"mother\"></markings-list>\r\n</section>\r\n</div>\r\n<br>\r\n<div class=\"boxed\">\r\n<section class=\"result\">\r\n    <div>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generate()\" data-ng-disabled=\"!$ctrl.checkCanGenerate()\" div-align=\"center\">ROLL NORMAL</button>\r\n        </section>\r\n        <br>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generateRandom()\" div-align=\"center\">ROLL RANDOM</button>\r\n        </section>\r\n        <br>\r\n        <br>\r\n        <section>\r\n            <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Fertility Treatment</label>   <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Plump Heart</label>\r\n        </section>\r\n        <result-display data-ng-repeat=\"character in $ctrl.result track by $index\" data-id=\"{{$index + 1}}\" data-character=\"character\"></result-display>\r\n    </div>\r\n    </div>\r\n    </div>\r\n<br>\r\n<br>\r\n</div>\r\n<center>Roller designed by Dethmisu for Nidheim</center>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
