@@ -101,7 +101,7 @@ exports.default = _module.name;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+        value: true
 });
 
 var _template = __webpack_require__(27);
@@ -113,34 +113,38 @@ __webpack_require__(9);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var component = {
-    templateUrl: _template2.default,
-    controller: function controller($rootScope, GeneratorService) {
-        var _this = this;
+        templateUrl: _template2.default,
+        controller: function controller($rootScope, GeneratorService) {
+                var _this = this;
 
-        this.$onInit = function () {
-            _this.result = null;
+                this.$onInit = function () {
+                        _this.result = null;
 
-            $rootScope.$on("newResult", function (event, newResult) {
-                _this.result = newResult;
-            });
-        };
+                        $rootScope.$on("newResult", function (event, newResult) {
+                                _this.result = newResult;
+                        });
+                };
 
-        this.generate = function () {
-            return GeneratorService.generate();
-        };
+                this.generate = function () {
+                        return GeneratorService.generate();
+                };
 
-        this.checkCanGenerate = function () {
-            return GeneratorService.checkCanGenerate();
-        };
+                this.checkCanGenerate = function () {
+                        return GeneratorService.checkCanGenerate();
+                };
 
-        this.togglePlusOne = function () {
-            return GeneratorService.options.plusOne = !GeneratorService.options.plusOne;
-        };
+                this.togglePlusOne = function () {
+                        return GeneratorService.options.plusOne = !GeneratorService.options.plusOne;
+                };
 
-        this.generateRandom = function () {
-            return GeneratorService.generateRandom();
-        };
-    }
+                this.generateRandom = function () {
+                        return GeneratorService.generateRandom();
+                };
+
+                this.generateLimitedRandom = function () {
+                        return GeneratorService.generateRandom(true);
+                };
+        }
 };
 
 exports.default = component;
@@ -270,10 +274,16 @@ var GeneratorService = function () {
     }, {
         key: 'generateRandom',
         value: function generateRandom() {
-            var BREEDS = this.DatabaseService.getBreeds(),
-                SKINS = this.DatabaseService.getSkins(),
-                BREEDS_MAX_INDEX = BREEDS.length - 1,
-                SKINS_MAX_INDEX = SKINS.length - 1;
+            var withLimitedData = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+            var BREEDS = this.DatabaseService.getBreeds().filter(function (i) {
+                return withLimitedData ? i.limited : true;
+            }).map(function (i) {
+                return i.name;
+            });
+            var SKINS = this.DatabaseService.getSkins();
+            var BREEDS_MAX_INDEX = BREEDS.length - 1;
+            var SKINS_MAX_INDEX = SKINS.length - 1;
 
             this.options = {
                 plusOne: false,
@@ -436,7 +446,9 @@ var component = {
         this.$onInit = function () {
             PARENT = _this.parent === 'father' ? GeneratorService.PARENTS.FATHER : GeneratorService.PARENTS.MOTHER;
 
-            _this.breeds = DatabaseService.getBreeds();
+            _this.breeds = DatabaseService.getBreeds().map(function (i) {
+                return i.name;
+            });
         };
 
         this.setSelectedBreed = function (breed) {
@@ -743,7 +755,7 @@ exports.default = _module.name;
 /* 23 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/breeds-list/template.html';
+var path = 'H:/Dev/kaylynn/Nidheim/src/app/components/breeds-list/template.html';
 var html = "<label ng-repeat = \"breed in $ctrl.breeds\">\r\n    <input type = \"radio\" name = \"{{$ctrl.parent}}SelectedBreed\" ng-click = \"$ctrl.setSelectedBreed(breed)\"/> {{breed}}\r\n</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -752,7 +764,7 @@ module.exports = path;
 /* 24 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/markings-list/template.html';
+var path = 'H:/Dev/kaylynn/Nidheim/src/app/components/markings-list/template.html';
 var html = "<label ng-repeat = \"marking in $ctrl.markings\">\r\n    <input type = \"checkbox\" ng-click =\"$ctrl.selectMarking(marking)\"></input> \r\n    {{marking}}\r\n</label>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -761,7 +773,7 @@ module.exports = path;
 /* 25 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/result-display/template.html';
+var path = 'H:/Dev/kaylynn/Nidheim/src/app/components/result-display/template.html';
 var html = "<span></span><br>\r\n<label>{{$ctrl.id}}) {{$ctrl.character.gender}} - Healthy</label> \r\n<br>\r\n<label>{{$ctrl.character.breed}} - Fledgeling</label>\r\n<br>\r\n<label>{{$ctrl.character.skin}} with</label><label data-ng-if=\"$ctrl.character.markings.length\">\r\n    <label data-ng-repeat=\"marking in $ctrl.character.markings\">{{marking}}, </label>\r\n</label>\r\n<label data-ng-if=\"$ctrl.character.mutations.length\">\r\n    <br>\r\n    [Mutations:]\r\n    <label data-ng-repeat=\"mutation in $ctrl.character.mutations\">{{mutation}}</label>\r\n</label>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -770,7 +782,7 @@ module.exports = path;
 /* 26 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/skins-list/template.html';
+var path = 'H:/Dev/kaylynn/Nidheim/src/app/components/skins-list/template.html';
 var html = "<label ng-repeat = \"skin in $ctrl.skins\"><input type =\"radio\" name = \"{{$ctrl.parent}}SelectedSkin\" ng-click = \"$ctrl.setSelectedSkin(skin)\"/>{{skin}}</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -779,8 +791,8 @@ module.exports = path;
 /* 27 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/template.html';
-var html = "<div class=\"center\">\r\n<div class=\"container\">\r\n\r\n<div class=\"boxed\">\r\n    <center><h2>Father</h2></center>\r\n    <hr>\r\n<section class = \"father\">\r\n   <h4>Breed</h4>\r\n        <breeds-list data-parent=\"father\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n        <skins-list data-parent=\"father\"></skins-list>\r\n        <h4>Markings</h4>\r\n        <markings-list data-parent=\"father\"></markings-list>\r\n</section>\r\n</div>\r\n<div class=\"boxed\">\r\n    <center><h2>Mother</h2></center>\r\n    <hr>\r\n<section class = \"mother\">\r\n    <h4>Breed</h4>\r\n<breeds-list data-parent=\"mother\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n    <skins-list data-parent=\"mother\"></skins-list>\r\n    <h4>Markings</h4>\r\n    <markings-list data-parent=\"mother\"></markings-list>\r\n</section>\r\n</div>\r\n<br>\r\n<div class=\"boxed\">\r\n<section class=\"result\">\r\n    <div>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generate()\" data-ng-disabled=\"!$ctrl.checkCanGenerate()\" div-align=\"center\">ROLL NORMAL</button>\r\n        </section>\r\n        <br>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generateRandom()\" div-align=\"center\">ROLL RANDOM</button>\r\n        </section>\r\n        <br>\r\n        <br>\r\n        <section>\r\n            <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Fertility Treatment</label>   <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Plump Heart</label>\r\n        </section>\r\n        <result-display data-ng-repeat=\"character in $ctrl.result track by $index\" data-id=\"{{$index + 1}}\" data-character=\"character\"></result-display>\r\n    </div>\r\n    </div>\r\n    </div>\r\n<br>\r\n<br>\r\n</div>\r\n<center>Roller designed by Dethmisu for Nidheim</center>";
+var path = 'H:/Dev/kaylynn/Nidheim/src/app/template.html';
+var html = "<div class=\"center\">\r\n<div class=\"container\">\r\n\r\n<div class=\"boxed\">\r\n    <center><h2>Father</h2></center>\r\n    <hr>\r\n<section class = \"father\">\r\n   <h4>Breed</h4>\r\n        <breeds-list data-parent=\"father\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n        <skins-list data-parent=\"father\"></skins-list>\r\n        <h4>Markings</h4>\r\n        <markings-list data-parent=\"father\"></markings-list>\r\n</section>\r\n</div>\r\n<div class=\"boxed\">\r\n    <center><h2>Mother</h2></center>\r\n    <hr>\r\n<section class = \"mother\">\r\n    <h4>Breed</h4>\r\n<breeds-list data-parent=\"mother\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n    <skins-list data-parent=\"mother\"></skins-list>\r\n    <h4>Markings</h4>\r\n    <markings-list data-parent=\"mother\"></markings-list>\r\n</section>\r\n</div>\r\n<br>\r\n<div class=\"boxed\">\r\n<section class=\"result\">\r\n    <div>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generate()\" data-ng-disabled=\"!$ctrl.checkCanGenerate()\" div-align=\"center\">ROLL NORMAL</button>\r\n        </section>\r\n        <br>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generateRandom()\" div-align=\"center\">ROLL RANDOM</button>\r\n        </section>\r\n        <br>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generateLimitedRandom()\" div-align=\"center\">ROLL LIMITED RANDOM</button>\r\n        </section>\r\n        <br>\r\n        <br>\r\n        <section>\r\n            <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Fertility Treatment</label>   <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Plump Heart</label>\r\n        </section>\r\n        <result-display data-ng-repeat=\"character in $ctrl.result track by $index\" data-id=\"{{$index + 1}}\" data-character=\"character\"></result-display>\r\n    </div>\r\n    </div>\r\n    </div>\r\n<br>\r\n<br>\r\n</div>\r\n<center>Roller designed by Dethmisu for Nidheim</center>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
@@ -790,63 +802,7 @@ module.exports = path;
 /* 30 */
 /***/ (function(module, exports) {
 
-module.exports = {
-	"baseSkinColors": [
-		"Earthbound",
-		"Jade",
-		"Jasper",
-		"Mauve",
-		"Onyx",
-		"Pearl",
-		"Russian",
-		"Solar"
-	],
-	"breeds": [
-		"Blisterwing",
-		"Pridebreaker",
-		"Ripplefrill",
-		"Slabhide",
-		"Vilebane",
-		"Windspeaker"
-	],
-	"markings": [
-		"Anaconda",
-		"Bandit",
-		"Bullseye",
-		"Caped",
-		"Collared",
-		"Crested",
-		"Dalmatian",
-		"Fawn Spots",
-		"Fleabitten",
-		"Ghoul",
-		"Harlequin",
-		"Highlights",
-		"Ink",
-		"King Cheetah",
-		"Marked",
-		"Merle",
-		"Nebula",
-		"Piebald",
-		"Siamese",
-		"Smear",
-		"Soot",
-		"Splash",
-		"Tasmanian Tiger",
-		"Victorian",
-		"Water Trickle",
-		"Webbed"
-	],
-	"mutations": [
-		"Maned",
-		"Fanged",
-		"Albino",
-		"Whelp Syndrome",
-		"Wingless",
-		"Chameleon",
-		"Chimerism"
-	]
-};
+module.exports = {"baseSkinColors":["Earthbound","Jade","Jasper","Mauve","Onyx","Pearl","Russian","Solar"],"breeds":[{"name":"Blisterwing","limited":true},{"name":"Pridebreaker","limited":true},{"name":"Ripplefrill","limited":true},{"name":"Slabhide","limited":false},{"name":"Vilebane","limited":false},{"name":"Windspeaker","limited":false}],"markings":["Anaconda","Bandit","Bullseye","Caped","Collared","Crested","Dalmatian","Fawn Spots","Fleabitten","Ghoul","Harlequin","Highlights","Ink","King Cheetah","Marked","Merle","Nebula","Piebald","Siamese","Smear","Soot","Splash","Tasmanian Tiger","Victorian","Water Trickle","Webbed"],"mutations":["Maned","Fanged","Albino","Whelp Syndrome","Wingless","Chameleon","Chimerism"]}
 
 /***/ })
 ],[22]);
