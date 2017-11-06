@@ -45,12 +45,14 @@ class GeneratorService {
         this.$rootScope.$broadcast('newResult', characters);
     }
 
-    generateRandom() {
-        const BREEDS = this.DatabaseService.getBreeds(),
-            SKINS = this.DatabaseService.getSkins(),
-            BREEDS_MAX_INDEX = BREEDS.length - 1,
-            SKINS_MAX_INDEX = SKINS.length - 1;
-        
+    generateRandom(withLimitedData = false) {
+        const BREEDS = this.DatabaseService.getBreeds()
+            .filter(i => withLimitedData ? i.limited : true)
+            .map(i => i.name);
+        const SKINS = this.DatabaseService.getSkins();
+        const BREEDS_MAX_INDEX = BREEDS.length - 1;
+        const SKINS_MAX_INDEX = SKINS.length - 1;
+
         this.options = {
             plusOne: false,
             father: {

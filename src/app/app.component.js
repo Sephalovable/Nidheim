@@ -19,6 +19,8 @@ const component = {
         this.togglePlusOne = () => GeneratorService.options.plusOne = !GeneratorService.options.plusOne;
 
         this.generateRandom = () => GeneratorService.generateRandom();
+
+        this.generateLimitedRandom = () => GeneratorService.generateRandom(true);
     }
 };
 

@@ -9,7 +9,7 @@ const component = {
         this.$onInit = () => {
             PARENT = (this.parent === 'father') ? GeneratorService.PARENTS.FATHER : GeneratorService.PARENTS.MOTHER;
 
-            this.breeds = DatabaseService.getBreeds();
+            this.breeds = DatabaseService.getBreeds().map(i => i.name);
         };
 
         this.setSelectedBreed = (breed) => GeneratorService.setBreed(PARENT, breed);

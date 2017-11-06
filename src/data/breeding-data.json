@@ -10,12 +10,30 @@
         "Solar"
     ], 
     "breeds":[
-        "Blisterwing",
-        "Pridebreaker",
-        "Ripplefrill",
-        "Slabhide",
-        "Vilebane",
-        "Windspeaker"
+        {
+            "name": "Blisterwing",
+            "limited": true
+        },
+        {
+            "name": "Pridebreaker",
+            "limited": true
+        },
+        {
+            "name": "Ripplefrill",
+            "limited": true
+        },
+        {
+            "name": "Slabhide",
+            "limited": false
+        },
+        {
+            "name": "Vilebane",
+            "limited": false
+        },
+        {
+            "name": "Windspeaker",
+            "limited": false
+        }
     ],
     "markings": [
         "Anaconda",
