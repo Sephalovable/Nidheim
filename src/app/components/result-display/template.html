@@ -1,13 +1,22 @@
 <span></span><br>
 <label>{{$ctrl.id}}) {{$ctrl.character.gender}} - Healthy</label> 
-<br>
-<label>{{$ctrl.character.breed}} - Fledgeling</label>
-<br>
-<label>{{$ctrl.character.skin}} with</label><label data-ng-if="$ctrl.character.markings.length">
-    <label data-ng-repeat="marking in $ctrl.character.markings">{{marking}}, </label>
+    <br>
+    
+<label>M: {{$ctrl.character.breed}} Mane</label>
+    <br>
+<label>F: {{$ctrl.character.ear}} Ears, {{$ctrl.character.tail}} Tail, {{$ctrl.character.wing}} Wings</label>
+    <br>
+<label>P: {{$ctrl.character.skin}} with</label>
+<label data-ng-if="$ctrl.character.markings.length">
+    <label>{{ $ctrl.character.markings.join(', ') }}</label>
+        <label>{{traities}}</label>
 </label>
+<label data-ng-if="$ctrl.character.traities.length">
+    <br>
+    [Attributes:]
+    <label>{{ $ctrl.character.traities.join(', ') }}</label>
 <label data-ng-if="$ctrl.character.mutations.length">
     <br>
     [Mutations:]
-    <label data-ng-repeat="mutation in $ctrl.character.mutations">{{mutation}}</label>
+    <label>{{ $ctrl.character.mutations.join(', ') }}</label>
 </label>

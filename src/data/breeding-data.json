@@ -1,75 +1,104 @@
 {
     "baseSkinColors": [
-        "Earthbound", 
-        "Jade", 
-        "Jasper", 
+        "Ebony", 
+        "Gilded", 
+        "Indigo", 
         "Mauve",
-        "Onyx",
-        "Pearl",
-        "Russian",
-        "Solar"
+        "Merlot",
+        "Ochre",
+        "Silver",
+        "Titanium",
+        "Umber",
+        "Verdant"
     ], 
+
+
     "breeds":[
         {
-            "name": "Blisterwing",
-            "limited": true
-        },
-        {
-            "name": "Pridebreaker",
-            "limited": true
-        },
-        {
-            "name": "Ripplefrill",
-            "limited": true
-        },
-        {
-            "name": "Slabhide",
+            "name": "Normal",
             "limited": false
-        },
-        {
-            "name": "Vilebane",
-            "limited": false
-        },
-        {
-            "name": "Windspeaker",
-            "limited": false
-        }
+        }     
     ],
+
+
+    "ears":[
+        "Normal"
+    ],
+
+
+    "tails":[
+        "Dragon",
+        "Feline",
+        "Nub",
+        "Spear",
+        "Whip"
+    ],
+
+
+    "wings":[
+        "Dragon"
+    ],
+
+
+    "traities":[
+        "Inoculated",
+        "One with Nature",
+        "Tough Skin",
+        "Casanova",
+        "Fertility Treatment",
+        "Ambassador",
+        "Lucky",
+        "Pack Leader",
+        "Scholar",
+        "King's Favor",
+        "Sleight of Hand",
+        "Transmutation",
+        "Popular"
+    ],
+    
+
     "markings": [
+        "Amazon",
         "Anaconda",
-        "Bandit",
-        "Bullseye",
-        "Caped",
-        "Collared",
-        "Crested",
-        "Dalmatian",
-        "Fawn Spots",
-        "Fleabitten",
-        "Ghoul",
-        "Harlequin",
-        "Highlights",
+        "Banded",
+        "Breeze",
+        "Cape",
+        "Dappled",
+        "Dorsal Stripes",
+        "Dun",
+        "Fawn",
+        "Haze",
         "Ink",
-        "King Cheetah",
-        "Marked",
-        "Merle",
-        "Nebula",
-        "Piebald",
-        "Siamese",
-        "Smear",
-        "Soot",
-        "Splash",
-        "Tasmanian Tiger",
-        "Victorian",
-        "Water Trickle",
-        "Webbed"
-    ],
-    "mutations": [
         "Maned",
-        "Fanged",
-        "Albino",
-        "Whelp Syndrome",
+        "Marbled",
+        "Masked",
+        "Merle",
+        "Monarch",
+        "Nebula",
+        "Pangare",
+        "Piebald",
+        "Restricted Ink",
+        "Restricted Piebald",
+        "Sable",
+        "Siamese",
+        "Splash",
+        "Streaks",
+        "Tabby",
+        "Tipped",
+        "Wolverine"
+    ],
+    
+
+    "mutations": [
+        "Albinism",
+        "Chimerism",
+        "Melanism",
         "Wingless",
-        "Chameleon",
-        "Chimerism"
+        "Roman Nose",
+        "Tufted",
+        "Fanged",
+        "Bearded",
+        "Jagged Jaw",
+        "Cerberus"
     ]
 }
