@@ -15,14 +15,14 @@
 
     "breeds":[
         {
-            "name": "Normal",
+            "name": "Standard",
             "limited": false
         }     
     ],
 
 
     "ears":[
-        "Normal"
+        "Standard"
     ],
 
 

@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const htmlEntry = new HtmlPlugin({
     hash: true,
-    title: "Nidheim",
+    title: "Nephilim",
     template: path.resolve(__dirname, 'src/index.ejs')
 });
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -22,7 +22,7 @@ module.exports = {
         'app': path.join(__dirname, 'src')
     },
     output: {
-        publicPath: '/Nidheim/',
+        publicPath: '/Nephilim-Breeding/',
         path: __dirname,
         filename: '[name].js'
     },

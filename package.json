@@ -1,5 +1,5 @@
 {
-  "name": "nephilim",
+  "name": "nephilim-breeding",
   "version": "1.0.0",
   "description": "",
   "main": "src/app",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://mordil@github.com/Sephalovable/Nidheim.git"
+    "url": "git+https://mordil@github.com/Sephalovable/Nephilim-Breeding.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sephalovable/Nidheim/issues"
+    "url": "https://github.com/Sephalovable/Nephilim-Breeding/issues"
   },
-  "homepage": "https://github.com/Sephalovable/Nidheim#readme",
+  "homepage": "https://github.com/Sephalovable/Nephilim-Breeding#readme",
   "babel": {
     "presets": [
       "es2015"

@@ -1173,7 +1173,7 @@ exports.default = _module.name;
 /* 35 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/breeds-list/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/breeds-list/template.html';
 var html = "<label ng-repeat = \"breed in $ctrl.breeds\">\r\n    <input type = \"radio\" name = \"{{$ctrl.parent}}SelectedBreed\" ng-click = \"$ctrl.setSelectedBreed(breed)\"/> {{breed}}\r\n</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1182,7 +1182,7 @@ module.exports = path;
 /* 36 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/ears-list/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/ears-list/template.html';
 var html = "<label ng-repeat=\"ear in $ctrl.ears\">\r\n    <input type=\"radio\" name=\"{{$ctrl.parent}}SelectedEar\" ng-click=\"$ctrl.setSelectedEar(ear)\" /> {{ear}}\r\n</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1191,7 +1191,7 @@ module.exports = path;
 /* 37 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/markings-list/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/markings-list/template.html';
 var html = "<label ng-repeat = \"marking in $ctrl.markings\">\r\n    <input type = \"checkbox\" ng-click =\"$ctrl.selectMarking(marking)\"></input> \r\n    {{marking}}\r\n</label>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1200,7 +1200,7 @@ module.exports = path;
 /* 38 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/result-display/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/result-display/template.html';
 var html = "<span></span><br>\r\n<label>{{$ctrl.id}}) {{$ctrl.character.gender}} - Healthy</label> \r\n    <br>\r\n    \r\n<label>M: {{$ctrl.character.breed}} Mane</label>\r\n    <br>\r\n<label>F: {{$ctrl.character.ear}} Ears, {{$ctrl.character.tail}} Tail, {{$ctrl.character.wing}} Wings</label>\r\n    <br>\r\n<label>P: {{$ctrl.character.skin}} with</label>\r\n<label data-ng-if=\"$ctrl.character.markings.length\">\r\n    <label>{{ $ctrl.character.markings.join(', ') }}</label>\r\n        <label>{{traities}}</label>\r\n</label>\r\n<label data-ng-if=\"$ctrl.character.traities.length\">\r\n    <br>\r\n    [Attributes:]\r\n    <label>{{ $ctrl.character.traities.join(', ') }}</label>\r\n<label data-ng-if=\"$ctrl.character.mutations.length\">\r\n    <br>\r\n    [Mutations:]\r\n    <label>{{ $ctrl.character.mutations.join(', ') }}</label>\r\n</label>\r\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1209,7 +1209,7 @@ module.exports = path;
 /* 39 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/skins-list/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/skins-list/template.html';
 var html = "<label ng-repeat = \"skin in $ctrl.skins\"><input type =\"radio\" name = \"{{$ctrl.parent}}SelectedSkin\" ng-click = \"$ctrl.setSelectedSkin(skin)\"/>{{skin}}</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1218,7 +1218,7 @@ module.exports = path;
 /* 40 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/tails-list/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/tails-list/template.html';
 var html = "<label ng-repeat = \"tail in $ctrl.tails\"><input type =\"radio\" name = \"{{$ctrl.parent}}SelectedTail\" ng-click = \"$ctrl.setSelectedTail(tail)\"/>{{tail}}</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1227,7 +1227,7 @@ module.exports = path;
 /* 41 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/traities-list/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/traities-list/template.html';
 var html = "<label ng-repeat=\"traitie in $ctrl.traities\">\r\n    <input type=\"checkbox\" ng-click=\"$ctrl.selectTraitie(traitie)\"></input>\r\n    {{traitie}}\r\n</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1236,7 +1236,7 @@ module.exports = path;
 /* 42 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/components/wings-list/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/components/wings-list/template.html';
 var html = "<label ng-repeat=\"wing in $ctrl.wings\"><input type=\"radio\" name=\"{{$ctrl.parent}}SelectedWing\" ng-click=\"$ctrl.setSelectedWing(wing)\" />{{wing}}</label>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1245,7 +1245,7 @@ module.exports = path;
 /* 43 */
 /***/ (function(module, exports) {
 
-var path = 'C:/Users/Master/Documents/Nidheim/src/app/template.html';
+var path = 'C:/Users/Master/Documents/Nephilim-Breeding/src/app/template.html';
 var html = "<div class=\"center\">\r\n<div class=\"container\">\r\n\r\n<div class=\"boxed\">\r\n    <center><h2>Father</h2></center>\r\n    <hr>\r\n<section class = \"father\">\r\n   <h4>Mane Type</h4>\r\n        <breeds-list data-parent=\"father\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n        <skins-list data-parent=\"father\"></skins-list>\r\n        <h4>Ear Type</h4>\r\n        <ears-list data-parent=\"father\"></ears-list>\r\n        <h4>Tail Type</h4>\r\n        <tails-list data-parent=\"father\"></tails-list>\r\n        <h4>Wing Type</h4>\r\n        <wings-list data-parent=\"father\"></wings-list>\r\n        <h4>Markings</h4>\r\n        <markings-list data-parent=\"father\"></markings-list>\r\n</section>\r\n</div>\r\n<div class=\"boxed\">\r\n    <center><h2>Mother</h2></center>\r\n    <hr>\r\n<section class = \"mother\">\r\n    <h4>Mane Type</h4>\r\n<breeds-list data-parent=\"mother\"></breeds-list>\r\n    <h4>Base Coat</h4>\r\n    <skins-list data-parent=\"mother\"></skins-list>\r\n        <h4>Ear Type</h4>\r\n        <ears-list data-parent=\"mother\"></ears-list>\r\n        <h4>Tail Type</h4>\r\n        <tails-list data-parent=\"mother\"></tails-list>\r\n        <h4>Wing Type</h4>\r\n        <wings-list data-parent=\"mother\"></wings-list>\r\n    <h4>Markings</h4>\r\n    <markings-list data-parent=\"mother\"></markings-list>\r\n</section>\r\n</div>\r\n<br>\r\n<div class=\"boxed\">\r\n<section class=\"result\">\r\n    <div>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generate()\" data-ng-disabled=\"!$ctrl.checkCanGenerate()\" div-align=\"center\">ROLL NORMAL</button>\r\n        </section>\r\n        <br>\r\n        <section>\r\n            <button data-ng-click=\"$ctrl.generateRandom()\" div-align=\"center\">ROLL RANDOM</button>\r\n        </section>\r\n        <br>\r\n        <br>\r\n        <br>\r\n        <section>\r\n            <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Fertility Supplements</label>   <label><input type =\"checkbox\" ng-click=\"$ctrl.togglePlusOne()\"> Fertility Treatment Trait</label>\r\n        </section>\r\n        <result-display data-ng-repeat=\"character in $ctrl.result track by $index\" data-id=\"{{$index + 1}}\" data-character=\"character\"></result-display>\r\n    </div>\r\n    </div>\r\n    </div>\r\n<br>\r\n<br>\r\n</div>\r\n<center>Roller designed by Sephasaur for Nephilim</center>";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
@@ -1271,12 +1271,12 @@ module.exports = {
 	],
 	"breeds": [
 		{
-			"name": "Normal",
+			"name": "Standard",
 			"limited": false
 		}
 	],
 	"ears": [
-		"Normal"
+		"Standard"
 	],
 	"tails": [
 		"Dragon",
