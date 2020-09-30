@@ -18,23 +18,23 @@ getMutations(){
 
 }
 
-getWings() {
-    return DATABASE.wings;
+//getWings() {
+    //return DATABASE.wings;
     
-}    
+//}    
     
 getTraities() {
     return DATABASE.traities;
     
 }   
     
-getEars() {
-    return DATABASE.ears;    
-}   
+//getEars() {
+ //   return DATABASE.ears;    
+//}   
 
-getTails() {
-    return DATABASE.tails;    
-}    
+//getTails() {
+  //  return DATABASE.tails;    
+//}    
 
 getBreeds(){
     return DATABASE.breeds;

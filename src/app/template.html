@@ -5,16 +5,10 @@
     <center><h2>Father</h2></center>
     <hr>
 <section class = "father">
-   <h4>Mane Type</h4>
+   <h4>Breed Type</h4>
         <breeds-list data-parent="father"></breeds-list>
     <h4>Base Coat</h4>
         <skins-list data-parent="father"></skins-list>
-        <h4>Ear Type</h4>
-        <ears-list data-parent="father"></ears-list>
-        <h4>Tail Type</h4>
-        <tails-list data-parent="father"></tails-list>
-        <h4>Wing Type</h4>
-        <wings-list data-parent="father"></wings-list>
         <h4>Markings</h4>
         <markings-list data-parent="father"></markings-list>
 </section>
@@ -23,16 +17,10 @@
     <center><h2>Mother</h2></center>
     <hr>
 <section class = "mother">
-    <h4>Mane Type</h4>
+    <h4>Breed Type</h4>
 <breeds-list data-parent="mother"></breeds-list>
     <h4>Base Coat</h4>
     <skins-list data-parent="mother"></skins-list>
-        <h4>Ear Type</h4>
-        <ears-list data-parent="mother"></ears-list>
-        <h4>Tail Type</h4>
-        <tails-list data-parent="mother"></tails-list>
-        <h4>Wing Type</h4>
-        <wings-list data-parent="mother"></wings-list>
     <h4>Markings</h4>
     <markings-list data-parent="mother"></markings-list>
 </section>
@@ -52,7 +40,7 @@
         <br>
         <br>
         <section>
-            <label><input type ="checkbox" ng-click="$ctrl.togglePlusOne()"> Fertility Supplements</label>   <label><input type ="checkbox" ng-click="$ctrl.togglePlusOne()"> Fertility Treatment Trait</label>
+            <label><input type ="checkbox" ng-click="$ctrl.togglePlusOne()"> Fertility Supplements</label> 
         </section>
         <result-display data-ng-repeat="character in $ctrl.result track by $index" data-id="{{$index + 1}}" data-character="character"></result-display>
     </div>
@@ -61,4 +49,4 @@
 <br>
 <br>
 </div>
-<center>Roller designed by Sephasaur for Nephilim</center>
+<center>Roller designed by Sephasaur for Nemeion</center>

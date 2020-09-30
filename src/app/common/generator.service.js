@@ -17,17 +17,11 @@ class GeneratorService {
             father: {
                 skin: null,
                 breed: null,
-                ear: null,
-                tail: null,
-                wing: null,
                 markings: []
             },
             mother: {
                 skin: null,
                 breed: null,
-                ear: null,
-                tail: null,
-                wing: null,
                 markings: []
             }
         };
@@ -39,7 +33,7 @@ class GeneratorService {
             return;
         }
 
-        const MAX_CHARACTER_SEED = _.random(1, 4);        
+        const MAX_CHARACTER_SEED = _.random(1, 2);        
         const MAX_CHARACTERS = (this.options.plusOne) ? MAX_CHARACTER_SEED + 1 : MAX_CHARACTER_SEED;
 
         let characters = [];
@@ -56,30 +50,18 @@ class GeneratorService {
             .filter(i => withLimitedData ? i.limited : true)
             .map(i => i.name);
         const SKINS = this.DatabaseService.getSkins();
-        const EARS = this.DatabaseService.getEars();
-        const TAILS = this.DatabaseService.getTails();
-        const WINGS = this.DatabaseService.getWings();
         const BREEDS_MAX_INDEX = BREEDS.length - 1;
         const SKINS_MAX_INDEX = SKINS.length - 1;
-        const EARS_MAX_INDEX = EARS.length - 1;
-        const TAILS_MAX_INDEX = TAILS.length - 1;
-        const WINGS_MAX_INDEX = WINGS.length - 1;
 
         this.options = {
             plusOne: false,
             father: {
                 skin: SKINS[_.random(0, SKINS_MAX_INDEX)],
-                ear: EARS[_.random(0, EARS_MAX_INDEX)],
-                tail: TAILS[_.random(0, TAILS_MAX_INDEX)],
-                wing: WINGS[_.random(0, WINGS_MAX_INDEX)],
                 breed: BREEDS[_.random(0, BREEDS_MAX_INDEX)],
                 markings: this._generateRandomListOfMarkings()
             },
             mother: {
-                skin: SKINS[_.random(0, SKINS_MAX_INDEX)],
-                ear: EARS[_.random(0, EARS_MAX_INDEX)],
-                tail: TAILS[_.random(0, TAILS_MAX_INDEX)],
-                wing: WINGS[_.random(0, WINGS_MAX_INDEX)],            
+                skin: SKINS[_.random(0, SKINS_MAX_INDEX)],       
                 breed: BREEDS[_.random(0, BREEDS_MAX_INDEX)],
                 markings: this._generateRandomListOfMarkings()
             }
@@ -93,31 +75,13 @@ class GeneratorService {
               MOTHER = this.options.mother;
 
         return FATHER.breed && MOTHER.breed &&
-            FATHER.skin && MOTHER.skin &&
-            FATHER.ear && MOTHER.ear &&
-            FATHER.tail && MOTHER.tail &&
-            FATHER.wing && MOTHER.wing;
+            FATHER.skin && MOTHER.skin;
     }
 
     setSkin(parent, skin) {
         this.options[parent].skin = skin;
         console.log(`${parent} Skin: ${skin}`);
     }
-
-    setEar(parent, ear) {
-        this.options[parent].ear = ear;
-        console.log(`${parent} Ear: ${ear}`);
-    }
-
-    setTail(parent, tail) {
-        this.options[parent].tail = tail;
-        console.log(`${parent} Tail: ${tail}`);
-    }
-
-    setWing(parent, wing) {
-        this.options[parent].wing = wing;
-        console.log(`${parent} Wing: ${wing}`);
-    }  
 
     setBreed(parent, breed) {
         this.options[parent].breed = breed;
@@ -140,20 +104,14 @@ class GeneratorService {
         const FATHER = this.options.father,
             MOTHER = this.options.mother,
             GENDERS = ["Male", "Female"],
-            MAX_MARKINGS = _.random(1, this.MAX_MARKINGS);
+            MAX_MARKINGS = _.random(0, this.MAX_MARKINGS);
 
         let skins = [FATHER.skin, MOTHER.skin],
             breeds = [FATHER.breed, MOTHER.breed],
-            ears = [FATHER.ear, MOTHER.ear],
-            tails = [FATHER.tail, MOTHER.tail],
-            wings = [FATHER.wing, MOTHER.wing],
             markings = _.concat([], FATHER.markings, MOTHER.markings); // combine all possible solutions
 
         let selectedSkin = skins[_.random(0, 1)],
             selectedBreed = breeds[_.random(0, 1)],
-            selectedEar = ears[_.random(0, 1)],
-            selectedTail = tails[_.random(0, 1)],
-            selectedWing = wings[_.random(0, 1)],
             selectedMutations = this._generateMutations(),
             selectedTraities = this._generateTraities(),
             selectedGender = GENDERS[_.random(0, 1)],
@@ -171,9 +129,6 @@ class GeneratorService {
         return {
             skin: selectedSkin,
             breed: selectedBreed,
-            ear: selectedEar,
-            tail: selectedTail,
-            wing: selectedWing,
             gender: selectedGender,
             markings: selectedMarkings,
             traities: selectedTraities,
@@ -184,10 +139,10 @@ class GeneratorService {
     _generateTraities() {
         function getOffsetBound(index) {
             // the first trait is a 10% chance
-            return 90 + (1 * index);
+            return 0 + (1 * index);
         }
 
-        const MAX_TRAITIES = _.random(0, 3);
+        const MAX_TRAITIES = _.random(1, 1);
         let traities = _.concat([], this.DatabaseService.getTraities()), // we don't want to change the original array
             selectedTraities = [];
 

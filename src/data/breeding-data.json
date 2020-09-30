@@ -1,104 +1,108 @@
 {
     "baseSkinColors": [
-        "Ebony", 
-        "Gilded", 
-        "Indigo", 
-        "Mauve",
-        "Merlot",
-        "Ochre",
-        "Silver",
-        "Titanium",
-        "Umber",
-        "Verdant"
+        "Tan", 
+        "Cream", 
+        "Agouti"
     ], 
 
 
     "breeds":[
         {
-            "name": "Standard",
+            "name": "Brute",
             "limited": false
-        }     
+        },
+
+        {
+            "name": "Regal",
+            "limited": false
+        }
     ],
-
-
-    "ears":[
-        "Standard"
-    ],
-
-
-    "tails":[
-        "Dragon",
-        "Feline",
-        "Nub",
-        "Spear",
-        "Whip"
-    ],
-
-
-    "wings":[
-        "Dragon"
-    ],
-
 
     "traities":[
-        "Inoculated",
-        "One with Nature",
-        "Tough Skin",
-        "Casanova",
-        "Fertility Treatment",
-        "Ambassador",
-        "Lucky",
-        "Pack Leader",
-        "Scholar",
-        "King's Favor",
-        "Sleight of Hand",
-        "Transmutation",
-        "Popular"
+        "Amber",
+                "Amber",
+                "Amber",
+                "Amber",
+                "Amber",
+                "Amber",
+        "Yellow",
+                "Yellow",
+                "Yellow",
+                "Yellow",
+                "Yellow",
+                "Yellow",
+        "Blue",
+                "Blue",
+                "Blue",
+        "Silver",
+        "Brown",
+                "Brown",
+                "Brown",
+                "Brown",
+                "Brown"
     ],
     
 
     "markings": [
-        "Amazon",
-        "Anaconda",
-        "Banded",
-        "Breeze",
-        "Cape",
-        "Dappled",
-        "Dorsal Stripes",
-        "Dun",
-        "Fawn",
-        "Haze",
-        "Ink",
-        "Maned",
-        "Marbled",
-        "Masked",
-        "Merle",
-        "Monarch",
-        "Nebula",
-        "Pangare",
-        "Piebald",
-        "Restricted Ink",
-        "Restricted Piebald",
-        "Sable",
-        "Siamese",
-        "Splash",
-        "Streaks",
-        "Tabby",
-        "Tipped",
-        "Wolverine"
+        "Alium",
+        "Aspera",
+        "Cicatricum",
+        "Feles",
+        "Habitu",
+        "Hebetes",
+        "Livorem",
+        "Maculosa",
+        "Niveus",
+        "Sigillum",
+        "Summa",
+        "Umbra"
     ],
     
 
     "mutations": [
         "Albinism",
+                "Albinism",
+                "Albinism",
+        "Auric",
+                "Auric",
+                "Auric",
         "Chimerism",
+        "Crucis",
+                "Crucis",
+                "Crucis",
+                "Crucis",
+                "Crucis",
+        "Erythrism",
+        "Leucism",
+                "Leucism",
+        "Maltese",
+                "Maltese",
+                "Maltese",
         "Melanism",
-        "Wingless",
-        "Roman Nose",
-        "Tufted",
-        "Fanged",
-        "Bearded",
-        "Jagged Jaw",
-        "Cerberus"
+        "Sanguine",
+                "Sanguine",
+                "Sanguine",
+        "Vitiligo",
+        "Heterochromia: Amber",
+        "Heterochromia: Yellow",
+        "Heterochromia: Brown",
+        "Heterochromia: Silver",
+        "Heterochromia: Blue",
+                "Heterochromia: Amber",
+                "Heterochromia: Yellow",
+                "Heterochromia: Brown",
+                "Heterochromia: Silver",
+                "Heterochromia: Blue",
+                "Heterochromia: Amber",
+                "Heterochromia: Yellow",
+                "Heterochromia: Brown",
+                "Heterochromia: Silver",
+                "Heterochromia: Blue",
+                "Heterochromia: Amber",
+                "Heterochromia: Yellow",
+                "Heterochromia: Brown",
+                "Heterochromia: Silver",
+                "Heterochromia: Blue",
+        "Polycaudal"
     ]
 }
