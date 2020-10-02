@@ -25,37 +25,6 @@ skins-list {
     padding-top: 4px;
     margin-right: 4px;
     margin-bottom: 4px; }
-ears-list {
-  margin-bottom: 20px;
-  display: block; }
-  ears-list label {
-    border: 2px solid black;
-    display: inline-block;
-    padding-right: 8px;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    margin-right: 4px;
-    margin-bottom: 4px; }
-tails-list {
-  display: inline-block; }
-  tails-list label {
-    border: 2px solid black;
-    display: inline-block;
-    padding-right: 8px;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    margin-right: 4px;
-    margin-bottom: 4px; }
-wings-list {
-  display: inline-block; }
-  wings-list label {
-    border: 2px solid black;
-    display: inline-block;
-    padding-right: 8px;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    margin-right: 4px;
-    margin-bottom: 4px; }
 traities-list {
   display: inline-block; }
   traities-list label {
