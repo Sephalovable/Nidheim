@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "angular": "^1.6.4",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.21"
   }
 }
